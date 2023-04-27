@@ -27,10 +27,11 @@ kind: Service
 metadata:
  name: mavenwebappsvc
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
    app: mavenwebapp
   ports:
    - port: 80
      targetPort: 8080
+     nodePort: 31166
 ...
